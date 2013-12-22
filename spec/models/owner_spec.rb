@@ -19,4 +19,6 @@ describe Owner do
     end
     it { should validate_uniqueness_of(:email) }
   end
+
+  it { should have_many(:dogs).through(:owner_dogs) }
 end
